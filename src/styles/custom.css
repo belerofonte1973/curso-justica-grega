@@ -1,0 +1,72 @@
+/* Custom CSS for Justiça na Literatura Grega */
+:root {
+  --sl-color-accent: #b8860b;
+  --sl-color-accent-low: #f5e6c8;
+  --sl-color-text-accent: #b8860b;
+  --sl-color-bg-accent: #f5e6c8;
+}
+
+/* Typography */
+:root {
+  --sl-font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --sl-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Dark mode */
+:root[data-theme='dark'] {
+  --sl-color-accent: #ffd700;
+  --sl-color-accent-low: #3d3200;
+  --sl-color-text-accent: #ffd700;
+  --sl-color-bg-accent: #3d3200;
+}
+
+/* Hero/home improvements */
+.sl-markdown-content h1:first-of-type {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sl-markdown-content blockquote {
+  border-left: 4px solid var(--sl-color-accent);
+  background: var(--sl-color-bg-accent);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+/* Tables */
+.sl-markdown-content table {
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.sl-markdown-content th {
+  background: var(--sl-color-accent-low);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.sl-markdown-content td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--sl-color-bg-accent);
+}
+
+/* Sidebar improvements */
+.sidebar-content details > summary {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--sl-color-text-accent);
+}
+
+/* Improve Greek terms visibility */
+.sl-markdown-content em:where(:has(code)) {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: var(--sl-color-bg-accent);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
